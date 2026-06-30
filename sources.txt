@@ -27,6 +27,7 @@ https://client-update.fastly.steamstatic.com/bins_codecs_ubuntu12.zip.vz.f341e3e
 https://client-update.fastly.steamstatic.com/bins_misc_ubuntu12.zip.6c432982c33ac3031212bf70aa9005aa48f92858
 https://client-update.fastly.steamstatic.com/bins_misc_ubuntu12.zip.vz.66f69431258861c897d2015efaf176d68bb468b2_19645812
 https://client-update.fastly.steamstatic.com/bins_hardware_ubuntu12.zip.da8814f3cc3788fd3789ce233dd86f107b2b244a
+https://client-update.fastly.steamstatic.com/bins_hardware_all.zip.vz.467e2952d3c5f1e51fe3f3e9ff8ba4c0bfb2454f_277854
 https://client-update.fastly.steamstatic.com/webkit_ubuntu12.zip.39bd18e1b2aa5045cfb77c990fa2451bb2ff6de9
 https://client-update.fastly.steamstatic.com/webkit_ubuntu12.zip.vz.b47a2e526c9a5dec38f46ec651d991bde3230762_89724917
 https://client-update.fastly.steamstatic.com/miles_ubuntu12.zip.2ff534200d16e16de747d01e97f3f55753839aa3
