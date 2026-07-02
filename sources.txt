@@ -13,8 +13,8 @@ https://client-update.fastly.steamstatic.com/strings_all.zip.e02a3508cb55bb1c51d
 https://client-update.fastly.steamstatic.com/strings_all.zip.vz.5d6124f8e221095479975dfd9aecad180b430a79_2077420
 https://client-update.fastly.steamstatic.com/public_all.zip.133960a385bd6772c4b2d2aea8b530205f27a32c
 https://client-update.fastly.steamstatic.com/public_all.zip.vz.6ce7bafc2d2a23a24a450f182c89fdda6cbc3628_24187846
-https://client-update.fastly.steamstatic.com/bins_hardware_all.zip.60a67fcbe8483c6cf35cd61032ff367384b4b60e
-https://client-update.fastly.steamstatic.com/bins_hardware_all.zip.vz.46cc9cc72beb376927d8a1b367294c993b7417ae_277845
+https://client-update.fastly.steamstatic.com/bins_hardware_all.zip.5bf7068dbcba49d983ed3b90ac8a0cabdd577849
+https://client-update.fastly.steamstatic.com/bins_hardware_all.zip.vz.fc74dc5916cd4b598bfe90f731714937063c07d3_277888
 https://client-update.fastly.steamstatic.com/steamui_websrc_sounds_all.zip.74727ca40ef88c5012bb631488fd285418dce825
 https://client-update.fastly.steamstatic.com/steamui_websrc_sounds_all.zip.vz.5ba6acd8f4dfe4b93437895b20344fab5bb3ff96_3714779
 https://client-update.fastly.steamstatic.com/steamui_websrc_movies_all.zip.fd1834bd9e99e82f4672e0bd4cab33edb648cbe0
