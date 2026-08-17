@@ -160,7 +160,7 @@
         fi
             echo "HeadcrabClientVersion: $versionnumber"
             echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-            cat ~/.SLSsteam.log
+            cat ~/.var/app/com.valvesoftware.Steam/.SLSsteam.log
             echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
             notify-send -e -i $NOTIF -a "h3adcr-b " "The Headcrab Approaches.. " "Client: $versionnumber "  & sleep 1s
             }
