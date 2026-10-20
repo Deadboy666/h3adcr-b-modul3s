@@ -80,10 +80,10 @@ TRASHITE_DIR=/usr/local/bin
         rm -rf "$Headcrab_Downgrader_Path"
         if [ -d "$FlatpakSteamInstallDir" ]; then
                cd $FlatpakSteamInstallDir/
-               echo "" $FlatpakSteamInstallDir/.steam-disable-steamrt64-client
+               echo "" &> "$FlatpakSteamInstallDir"/.steam-disable-steamrt64-client
         else
                 cd $SteamInstallDir/
-                echo "" $SteamInstallDir/.steam-disable-steamrt64-client
+                echo "" &> "$SteamInstallDir"/.steam-disable-steamrt64-client
             fi
                 revertsteam
             }
