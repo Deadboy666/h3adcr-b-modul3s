@@ -72,7 +72,7 @@
         uint32:0 \
         string:"/home/$USER/.local/share/icons/hicolor/48x48/apps/headcrab.png" \
         string:"the h3adcr-b approaches.." \
-        string:"Client Version: $versionnumber " \
+        string:"Client Version: "$versionnumber" " \
         array:string:"" \
         dict:string:variant:"" \
         int32:-1 &> /dev/null
