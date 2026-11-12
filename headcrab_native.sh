@@ -6,20 +6,6 @@
     NOTIF="$HOME/.local/share/icons/hicolor/48x48/apps/headcrab.png"
     FlatpakSteamInstallDir=$HOME/.var/app/com.valvesoftware.Steam/.steam/steam
     SteamInstallDir=$HOME/.steam/steam
-
-
- read_os_release(){
-        local f
-        OS_ID=""
-        OS_ID_LIKE=""
-        for f in /etc/os-release /usr/lib/os-release; do
-            [ -r "$f" ] || continue
-            . "$f"
-            break
-        done
-        OS_ID=${ID:-}
-        OS_ID_LIKE=${ID_LIKE:-}
-    }
 	
 read_os_release(){
         local f
