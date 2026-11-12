@@ -20,46 +20,7 @@
         OS_ID=${ID:-}
         OS_ID_LIKE=${ID_LIKE:-}
     }
-
-    archcheck(){
-        read_os_release
-        case " $OS_ID $OS_ID_LIKE " in
-            *" arch "*|*" cachyos "*) return 0 ;;
-        esac
-        return 1
-        }
-
-    debiancheck(){
-        read_os_release
-        case " $OS_ID $OS_ID_LIKE " in
-            *" debian "*|*" ubuntu "*) return 0 ;;
-        esac
-        return 1
-        }
-
-    steamoscheck(){
-        read_os_release
-        [ "$OS_ID" = "steamos" ]
-        }
-
-	voidcheck(){
-        read_os_release
-        [ "$OS_ID" = "void" ]
-        }
-
-	cachyoscheck(){
-        read_os_release
-        [ "$OS_ID" = "cachyos" ]
-        }
-
-	bazzitecheck(){
-        read_os_release
-        [ "$OS_ID" = "bazzite" ]
-        }
-
-    flatpakcheck(){
-        [ -d "$FlatpakSteamInstallDir" ]
-        }
+	
 read_os_release(){
         local f
         OS_ID=""
@@ -117,24 +78,6 @@ read_os_release(){
     flatpakcheck(){
         [ -d "$FlatpakSteamInstallDir" ]
         }
-
-    crconfigcheck(){
-      whereSLSsteamconfig
-        grep -F "DisableCloud: no" config.yaml &> /dev/null
-        }
-
-		SetupHeadcrab_Updater(){
-		mkdir -p $ApplicationDirectory
-		mkdir -p $IconDirectory
-		cd $IconDirectory/
-		wget -O headcrab.png "$Headcrab_Icon" &> /dev/null
-		cd $ApplicationDirectory/
-			wget -O headcrab.desktop "$Headcrab_Updater" &> /dev/null
-		    chmod +x headcrab.desktop
-			update-desktop-database $ApplicationDirectory
-			echo "Headcrab Updater Now In Your Applications Menu"
-			echo "Can Open Up Headcrab Updater To Update To Latest Version."
-	}
 
     SteamOSClientCheck(){
         if [ -f "steam_client_steamdeck_stable_steamrt64.manifest" ]; then
