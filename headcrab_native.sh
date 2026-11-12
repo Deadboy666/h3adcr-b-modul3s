@@ -205,7 +205,7 @@ read_os_release(){
             echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
             cat ~/.SLSsteam.log
             echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-            notify-send -e -i $NOTIF -a "h3adcr-b " "The Headcrab Approaches.. " "Client: $versionnumber "  & sleep 1s
+            notify-send -e -i $NOTIF -a "Powered by SLSsteam " "Client: $versionnumber "  & sleep 1s
             }
 
             wheresteampackage(){
