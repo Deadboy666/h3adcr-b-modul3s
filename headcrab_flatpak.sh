@@ -2,7 +2,7 @@
 
 
     STEAM_CLIENT="$HOME/.var/app/com.valvesoftware.Steam/.local/share/Steam/client.sh"
-    INJECT_SLS="LD_AUDIT=$HOME/.var/app/com.valvesoftware.Steam/.local/share/SLSsteam/library-inject.so:$HOME/.var/app/com.valvesoftware.Steam/.local/share/SLSsteam/SLSsteam.so"
+    INJECT_SLS="LD_AUDIT=$HOME/.var/app/com.valvesoftware.Steam/.local/share/SLSsteam/SLSsteam.so"
     INJECT_CR="LD_PRELOAD=$HOME/.var/app/com.valvesoftware.Steam/.local/share/CloudRedirect/cloud_redirect.so"
     NOTIF="$HOME/.local/share/icons/hicolor/48x48/apps/headcrab.png"
     FlatpakSteamInstallDir=$HOME/.var/app/com.valvesoftware.Steam/.steam/steam
@@ -63,11 +63,11 @@
         }
 
         SteamOSClientCheck(){
-        if [ -f "steam_client_steamdeck_stable_ubuntu12.manifest" ]; then
-            versionnumber=$(grep '"version"' steam_client_steamdeck_stable_ubuntu12.manifest | awk -F'"' '{print $4}')
+        if [ -f "steam_client_steamdeck_stable_steamrt64.manifest" ]; then
+            versionnumber=$(grep '"version"' steam_client_steamdeck_stable_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Stable"
-        elif [ -f steam_client_steamdeck_publicbeta_ubuntu12.manifest ]; then
-            versionnumber=$(grep '"version"' steam_client_steamdeck_publicbeta_ubuntu12.manifest | awk -F'"' '{print $4}')
+        elif [ -f steam_client_steamdeck_publicbeta_steamrt64.manifest ]; then
+            versionnumber=$(grep '"version"' steam_client_steamdeck_publicbeta_steamrt64.manifest | awk -F'"' '{print $4}')
 			echo "SteamClientChannel: Beta"
 			echo "Reverting To Stable Client With DGSC"
 		else
@@ -77,67 +77,67 @@
         }
 
 	BazziteClientCheck(){
-        if [ -f "steam_client_steamdeck_stable_ubuntu12.manifest" ]; then
-            versionnumber=$(grep '"version"' steam_client_steamdeck_stable_ubuntu12.manifest | awk -F'"' '{print $4}')
+        if [ -f "steam_client_steamdeck_stable_steamrt64.manifest" ]; then
+            versionnumber=$(grep '"version"' steam_client_steamdeck_stable_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Stable (Bazzite-Deck)"
-        elif [ -f steam_client_steamdeck_publicbeta_ubuntu12.manifest ]; then
-            versionnumber=$(grep '"version"' steam_client_steamdeck_publicbeta_ubuntu12.manifest | awk -F'"' '{print $4}')
+        elif [ -f steam_client_steamdeck_publicbeta_steamrt64.manifest ]; then
+            versionnumber=$(grep '"version"' steam_client_steamdeck_publicbeta_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Beta (Bazzite-Deck)"
-		elif [ -f "steam_client_ubuntu12.manifest" ]; then
-            versionnumber=$(grep '"version"' steam_client_ubuntu12.manifest | awk -F'"' '{print $4}')
+		elif [ -f "steam_client_steamrt64.manifest" ]; then
+            versionnumber=$(grep '"version"' steam_client_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Stable (Bazzite-Desktop)"
 		else
-            versionnumber=$(grep '"version"' steam_client_publicbeta_ubuntu12.manifest | awk -F'"' '{print $4}')
+            versionnumber=$(grep '"version"' steam_client_publicbeta_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Beta (Bazzite-Desktop)"
         fi
             echo "SteamClientType: Bazzite"
         }
 
 	CachyClientCheck(){
-        if [ -f "steam_client_steamdeck_stable_ubuntu12.manifest" ]; then
-            versionnumber=$(grep '"version"' steam_client_steamdeck_stable_ubuntu12.manifest | awk -F'"' '{print $4}')
+        if [ -f "steam_client_steamdeck_stable_steamrt64.manifest" ]; then
+            versionnumber=$(grep '"version"' steam_client_steamdeck_stable_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Stable (CachyOS-Handheld)"
-        elif [ -f steam_client_steamdeck_publicbeta_ubuntu12.manifest ]; then
-            versionnumber=$(grep '"version"' steam_client_steamdeck_publicbeta_ubuntu12.manifest | awk -F'"' '{print $4}')
+        elif [ -f steam_client_steamdeck_publicbeta_steamrt64.manifest ]; then
+            versionnumber=$(grep '"version"' steam_client_steamdeck_publicbeta_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Beta (CachyOS-Handheld)"
-		elif [ -f "steam_client_ubuntu12.manifest" ]; then
-            versionnumber=$(grep '"version"' steam_client_ubuntu12.manifest | awk -F'"' '{print $4}')
+		elif [ -f "steam_client_steamrt64.manifest" ]; then
+            versionnumber=$(grep '"version"' steam_client_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Stable (CachyOS-Desktop)"
 		else
-            versionnumber=$(grep '"version"' steam_client_publicbeta_ubuntu12.manifest | awk -F'"' '{print $4}')
+            versionnumber=$(grep '"version"' steam_client_publicbeta_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Beta (CachyOS-Desktop)"
         fi
             echo "SteamClientType: CachyOS"
         }
 
     FlatpakClientCheck(){
-        if [ -f "steam_client_ubuntu12.manifest" ]; then
-            versionnumber=$(grep '"version"' steam_client_ubuntu12.manifest | awk -F'"' '{print $4}')
+        if [ -f "steam_client_steamrt64.manifest" ]; then
+            versionnumber=$(grep '"version"' steam_client_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Stable"
         else
-            versionnumber=$(grep '"version"' steam_client_publicbeta_ubuntu12.manifest | awk -F'"' '{print $4}')
+            versionnumber=$(grep '"version"' steam_client_publicbeta_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Beta"
         fi
             echo "SteamClientType: Flatpak"
         }
 
     NativeClientCheck(){
-        if [ -f "steam_client_ubuntu12.manifest" ]; then
-            versionnumber=$(grep '"version"' steam_client_ubuntu12.manifest | awk -F'"' '{print $4}')
+        if [ -f "steam_client_steamrt64.manifest" ]; then
+            versionnumber=$(grep '"version"' steam_client_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Stable"
         else
-            versionnumber=$(grep '"version"' steam_client_publicbeta_ubuntu12.manifest | awk -F'"' '{print $4}')
+            versionnumber=$(grep '"version"' steam_client_publicbeta_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Beta"
         fi
             echo "SteamClientType: Native"
         }
 
 	VoidClientCheck(){
-        if [ -f "steam_client_ubuntu12.manifest" ]; then
-            versionnumber=$(grep '"version"' steam_client_ubuntu12.manifest | awk -F'"' '{print $4}')
+        if [ -f "steam_client_steamrt64.manifest" ]; then
+            versionnumber=$(grep '"version"' steam_client_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Stable"
         else
-            versionnumber=$(grep '"version"' steam_client_publicbeta_ubuntu12.manifest | awk -F'"' '{print $4}')
+            versionnumber=$(grep '"version"' steam_client_publicbeta_steamrt64.manifest | awk -F'"' '{print $4}')
             echo "SteamClientChannel: Beta"
         fi
             echo "SteamClientType: Void"
