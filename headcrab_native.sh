@@ -2,7 +2,7 @@
 
 
     STEAM_CLIENT="$HOME/.steam/steam/client.sh"
-    INJECT_SLS="LD_AUDIT="${LD_AUDIT:+$LD_AUDIT:}$HOME/.local/share/SLSsteam/SLSsteam.so"
+    INJECT_SLS="LD_AUDIT=${LD_AUDIT:+$LD_AUDIT:}$HOME/.local/share/SLSsteam/SLSsteam.so"
     INJECT_CR="LD_PRELOAD=${LD_PREOLOAD:+$LD_PRELOAD:}$HOME/.local/share/CloudRedirect/cloud_redirect.so"
     NOTIF="$HOME/.local/share/icons/hicolor/48x48/apps/headcrab.png"
     FlatpakSteamInstallDir="$HOME/.var/app/com.valvesoftware.Steam/.steam/steam"
