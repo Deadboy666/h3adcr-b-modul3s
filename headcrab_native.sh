@@ -177,8 +177,8 @@
 
        GameLauncher(){
         CheckClientInfo
-        echo "Loaded SLSsteam" & export $INJECT_SLS &> /dev/null
-        echo "Loaded CloudRedirect" & export $INJECT_CR &> /dev/null
+        echo "Loaded SLSsteam" & export "$INJECT_SLS" &> /dev/null
+        echo "Loaded CloudRedirect" & export "$INJECT_CR" &> /dev/null
         source $STEAM_CLIENT "$@" &> /dev/null
         }
 
